@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita:wght@700;800;900&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-base: #FFFFFF;
+  --color-surface: #F7F7F5;
+  --color-surface-light: #EFEFEC;
+  --color-text-primary: #0F1A12;
+  --color-text-secondary: #6B7280;
+  
+  --color-gtm-green: #1D6B44;
+  --color-signal-orange: #F07832;
+  --color-electric-teal: #0097A7;
+  --color-deep-violet: #6B46E0;
+  --color-radiant-yellow: #F5C518;
+  --color-hot-magenta: #D4006A;
+
+  --font-heading: "Sansita", serif;
+  --font-body: "Schibsted Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* All headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sansita', serif;
+  font-weight: 700;
+}
+
+/* Everything else */
+body, p, span, a, button, input,
+textarea, select, label, li {
+  font-family: 'Schibsted Grotesk', sans-serif;
+}
+
+/* Mono labels stay unchanged */
+.font-mono, [class*="font-mono"] {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Ticker animation */
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+}
+
+.animate-ticker-fast {
+  animation: ticker 25s linear infinite;
+}
+
+.animate-ticker:hover, .animate-ticker-fast:hover {
+  animation-play-state: paused;
+}
+
+@keyframes nav-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(29, 107, 68, 0.3); }
+  50% { box-shadow: 0 0 0 6px rgba(29, 107, 68, 0); }
+}
+
+.nav-cta-pulse {
+  animation: nav-pulse 3s ease infinite;
+}
+
+@keyframes strike {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.strikethrough-line {
+  width: 0%;
+  animation: strike 0.7s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes dot-pulse {
+  0%, 100% { r: 3; opacity: 0.35; }
+  50%       { r: 7; opacity: 1;    }
+}
+
+.animate-dot-pulse {
+  animation: dot-pulse var(--pulse-dur, 2.4s) ease-in-out infinite;
+  animation-delay: var(--pulse-delay, 0s);
+}
+
+@keyframes flywheel-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dot-activate {
+  0%   { transform: scale(0.4); opacity: 0.3; }
+  60%  { transform: scale(1.4); opacity: 1;   }
+  100% { transform: scale(1.0); opacity: 1;   }
+}
+
+.animate-flywheel {
+  animation: flywheel-rotate 24s linear infinite;
+  transform-origin: 240px 240px;
+}
+
+.calendly-inline-widget iframe {
+  border-radius: 1rem !important;
+  box-shadow: none !important;
+}
+
+/* Override Calendly's white background to near-white */
+/* This makes the calendar feel like it belongs */
+.calendly-inline-widget {
+  background: transparent !important;
+  border-radius: 1rem;
+  box-shadow: 0 24px 64px -12px rgba(0,0,0,0.25);
+}
+
+/* Style the Calendly-injected scrollbar to match */
+.calendly-inline-widget iframe::-webkit-scrollbar {
+  width: 4px;
+}
+.calendly-inline-widget iframe::-webkit-scrollbar-track {
+  background: transparent;
+}
+.calendly-inline-widget iframe::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 2px;
+}
+
+.btn-press:active {
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.card-shadow:hover {
+  box-shadow: 0 12px 40px -8px rgba(0,0,0,0.12);
+}
