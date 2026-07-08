@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { logoMarkDataUri } from "@/lib/seo";
 
 export const alt =
   "Watch How Inc. — Full-Service GTM Agency. One unified GTM engine.";
@@ -25,24 +26,9 @@ export default function OpenGraphImage() {
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <div
-            style={{
-              width: 64,
-              height: 64,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              background: "#1D6B44",
-              borderRadius: 14,
-              color: "#FFFFFF",
-              fontSize: 28,
-              fontWeight: 700,
-              letterSpacing: "-2px",
-            }}
-          >
-            WH
-          </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoMarkDataUri} width={72} height={72} alt="" />
           <div style={{ fontSize: 32, fontWeight: 700, color: "#0F1A12" }}>
             Watch How Inc.
           </div>

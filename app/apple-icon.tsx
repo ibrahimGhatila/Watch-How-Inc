@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { logoMarkDataUri } from "@/lib/seo";
 
 export const size = {
   width: 180,
@@ -16,15 +17,11 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1D6B44",
-          borderRadius: 40,
-          color: "#FFFFFF",
-          fontSize: 84,
-          fontWeight: 700,
-          letterSpacing: "-6px",
+          background: "#FFFFFF",
         }}
       >
-        WH
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logoMarkDataUri} width={150} height={150} alt="Watch How Inc." />
       </div>
     ),
     { ...size }

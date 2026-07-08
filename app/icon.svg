@@ -1,4 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#1D6B44"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" letter-spacing="-2" fill="#FFFFFF">WH</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Watch How Inc. monogram: tilted H + W with a teal accent dot -->
+  <g fill="none" stroke-linecap="butt">
+    <!-- H (amber) -->
+    <g transform="rotate(15 250 220)" stroke="#F5A623" stroke-width="42">
+      <path d="M196 130 V330" />
+      <path d="M312 130 V330" />
+      <path d="M196 232 H312" />
+    </g>
+    <!-- W (orange) -->
+    <g transform="rotate(11 300 320)">
+      <path d="M214 232 L262 402 L308 300 L354 402 L400 232"
+        stroke="#F07832" stroke-width="44" stroke-linejoin="miter" stroke-miterlimit="6" stroke-linecap="butt" />
+    </g>
+  </g>
+  <!-- accent dot (teal) -->
+  <circle cx="214" cy="368" r="34" fill="#35A8C6" />
 </svg>
