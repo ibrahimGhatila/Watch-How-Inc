@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import CtaBanner from "@/components/CtaBanner";
 import StatCard from "@/components/StatCard";
 import HeroLetters from "@/components/HeroLetters";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Watch How Inc. is a dedicated GTM expert team — the layer between slow traditional agencies and soulless automation. We engineer your competitive advantage.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 
 export default function AboutPage() {
   return (

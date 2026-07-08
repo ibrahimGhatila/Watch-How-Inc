@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
+
+export const metadata: Metadata = {
+  title: "Pricing",
+  description:
+    "Transparent GTM agency pricing with zero surprises. Every tier includes the full Watch How flywheel — Content, Paid Ads, Outbound, and Web Management.",
+  alternates: {
+    canonical: "/pricing",
+  },
+};
 
 export default function PricingPage() {
   return (

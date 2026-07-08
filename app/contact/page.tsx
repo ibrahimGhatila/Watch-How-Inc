@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import CtaBanner from "@/components/CtaBanner";
 import HeroLetters from "@/components/HeroLetters";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Book a free 30-minute GTM audit. We'll show you exactly where your go-to-market is leaking — and map your 90-day path to fixing it.",
+  alternates: {
+    canonical: "/contact",
+  },
+};
 
 export default function ContactPage() {
   return (
