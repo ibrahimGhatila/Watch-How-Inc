@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Flywheel from "@/components/Flywheel";
 import CtaBanner from "@/components/CtaBanner";
 import HeroLetters from "@/components/HeroLetters";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Content, Outbound, Paid Ads, and Web Management — four services synchronized into a single revenue-generating flywheel. Every channel feeds the others.",
+  alternates: {
+    canonical: "/services",
+  },
+};
 
 export default function ServicesPage() {
   return (
